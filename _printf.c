@@ -5,18 +5,27 @@
  * @next: char after the % (modulus)
  * @arg: arg for the indentifier
  * Return: the num of chars printed
+ * @next: character after the %
+ * @arg: argument for the indentifier
+ * Return: the number of characters printed
  * (excluding the null byte used to end output to strings)
  */
 int printIdentifiers(char next, va_list arg)
 {
-	int functsIndex;
+    int functsIndex;
 
-	identifierStruct functs[] = {
-		{"c", print_char},
+    identifierStruct functs[] =
+    {
+        {"c", print_char},
 		{"s", print_str},
         {"d", print_int},
 		{"i", print_int},
         {"b", print_unsignedToBinary},
+        {"u", print_unsigned},
+        {"o", print_oct},
+		{"x", print_hex},
+		{"X", print_HEX},
+		{NULL, NULL}
 	};
 
 	for (functsIndex = 0; functs[functsIndex].indentifier != NULL; functsIndex++)
