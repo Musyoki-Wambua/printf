@@ -3,6 +3,9 @@
 
 #include <stdlib.h>
 #include <stdarg.h>
+#include <stdio.h>
+#include <limits.h>
+#include <unistd.h>
 
 /**
  * struct flags - struct containing flags to "turn on"
@@ -16,6 +19,7 @@ typedef struct flags
 	int plus;
 	int space;
 	int hash;
+	int zero;
 } flags_t;
 
 /**
@@ -29,6 +33,20 @@ typedef struct printHandler
 	char c;
 	int (*f)(va_list ap, flags_t *f);
 } ph;
+
+
+/**
+ * struct format - match the conversion specifiers for printf
+ * @id: type char pointer of the specifier 
+ *      i.e (l, h) for (d, i, u, o, x, X)
+ * @f: type pointer to function for the conversion specifier
+ */
+
+typedef struct format
+{
+	char *id;
+	int (*f)();
+} converter;
 
 /* print_nums */
 int print_int(va_list l, flags_t *f);
@@ -72,5 +90,9 @@ int print_address(va_list l, flags_t *f);
 
 /* print_percent */
 int print_percent(va_list l, flags_t *f);
+
+/* print_strlen */
+int _strlen(char *s);
+int _strlenc(const char *s);
 
 #endif /* MAIN_H */
