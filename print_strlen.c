@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _strlen - Returns the lenght of a string.
+ * _strlen - Returns the length of a string.
  * @s: Type char pointer
  * Return: c.
  */
@@ -14,12 +14,12 @@ int _strlen(char *s)
 
 }
 /**
- * strlenc - Strlen function but applied for 
+ * strlen - Strlen function but applied for
  * constant char pointer s
  * @s: Type char pointer
  * Return: c
  */
-int _strlenc(const char *s)
+int _strlen(const char *s)
 {
 	int i;
 
