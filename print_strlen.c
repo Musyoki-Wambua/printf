@@ -14,7 +14,7 @@ int _strlen(char *s)
 
 }
 /**
- * strlenc - Strlen function but applied for 
+ * strlenc - Strlen function but applied for
  * constant char pointer s
  * @s: Type char pointer
  * Return: c
