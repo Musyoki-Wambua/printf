@@ -37,8 +37,8 @@ typedef struct printHandler
 
 /**
  * struct format - match the conversion specifiers for printf
- * @id: type char pointer of the specifier 
- *      i.e (l, h) for (d, i, u, o, x, X)
+ * @id: type char pointer of the specifier
+ * i.e (l, h) for (d, i, u, o, x, X)
  * @f: type pointer to function for the conversion specifier
  */
 
