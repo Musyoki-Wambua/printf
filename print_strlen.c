@@ -13,17 +13,3 @@ int _strlen(char *s)
 	return (i);
 
 }
-/**
- * strlenc - Strlen function but applied for
- * constant char pointer s
- * @s: Type char pointer
- * Return: c
- */
-int _strlenc(const char *s)
-{
-	int i;
-
-	for (i = 0; s[i] != 0; i++)
-		;
-	return (i);
-}
